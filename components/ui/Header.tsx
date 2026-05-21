@@ -9,9 +9,7 @@ export default function Header(){
             {/** Logo da aplicação */}
             <Image
             // Imagem via link
-            source={{
-                uri: 'https://reactnative.dev/img/tiny_logo.png'
-            }}
+            source={require('../../assets/images/nome imagem.jpg')}
             // estilo da imagem
             style = {styles.logo}
 
@@ -27,3 +25,27 @@ export default function Header(){
         </View>
     )
 }
+const styles = StyleSheet.create({
+    container: {
+        // centraliza os itens horizontalmente
+        alignItems: 'center',
+
+        // espaço abaixo do cabeçalho
+        marginBottom: 30
+    },
+    // estilo da logo
+    logo:{
+        width: 90,
+        height: 90,
+        marginBottom: 10
+    },
+    title: {
+        fontSize: 16,
+        color: COLORS.dark
+    },
+    subtitle: {
+        fontSize: 16,
+        color: COLORS.gray
+    }
+
+})
